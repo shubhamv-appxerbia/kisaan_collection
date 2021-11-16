@@ -1,0 +1,3804 @@
+{
+	"info": {
+		"_postman_id": "b5b0a060-b22f-48a4-885d-f83e73ad2519",
+		"name": "kisaan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delivery boy",
+			"item": [
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "getOrderForDelivery",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ordertype\" : \"neworder\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getOrderForDelivery",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getOrderForDelivery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDeliveredOrders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"delivery_date\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getDeliveredOrders",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getDeliveredOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendOrderNotification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"b_order_no\" : \"OR/32/01042020/1/D\",\r\n    \"type\" : \"neworder\",\r\n    \"priority\" : \"high\",\r\n    \"username\" : \"Seema\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apipath}}/sendOrderNotification",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"sendOrderNotification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "searchDeliveryOrders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"s\" : \"61\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/searchDeliveryOrders",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"searchDeliveryOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getTodaysAssgnOrders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"delivery_date\" : \"2021-05-11 00:00:00.000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getTodaysAssgnOrders",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getTodaysAssgnOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pendingPickupOrders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localpath}}/pendingPickupOrders",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"pendingPickupOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pickedUpOrders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localpath}}/pickedUpOrders",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"pickedUpOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrderDetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_id\" : 61176\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getOrderDetails",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getOrderDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateOrderDeliveredStatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Assign_Id\" : \"58\",\r\n    \"b_order_id\" : \"61138\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/updateOrderDeliveredStatus",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"updateOrderDeliveredStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pickUpOrder",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_id\" : 61176\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/pickUpOrder",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"pickUpOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDeliveryDetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"b_order_id\" : 61198\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getDeliveryDetails",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getDeliveryDetails"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "payment",
+					"item": [
+						{
+							"name": "sendPayLink",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Z1gzaEdBdTBuSXRxd08xUGMwVnU4Q09xNTIxQWd4WGdpMGV6dWRTR2FsU1JneEw2cjFBQXo1U2xWbnVD617790e5aea72",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "V1RheGR1ZnQ3ZWxNVElpakxYRmlvMmVaVmQ2cFk3VmFaVXk2bktIb2RteXd4eTVOWWQzMlA5dFlZU3pH614c1acda1944",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"b_order_id\" : 64751,\r\n    \"password\" : \"welcome@123\",\r\n    \"altmobile\" : 8408010986\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apipath}}/sendPayLink",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"sendPayLink"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "floatingCash",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"delivery_date\" : \"2021-05-10 00:00:00.000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/floatingCash",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"floatingCash"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "notification",
+					"item": [
+						{
+							"name": "getDeliveryNotification",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{apipath}}/getDeliveryNotification",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"getDeliveryNotification"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "getDeliveryBoy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Z1gzaEdBdTBuSXRxd08xUGMwVnU4Q09xNTIxQWd4WGdpMGV6dWRTR2FsU1JneEw2cjFBQXo1U2xWbnVD617790e5aea72",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "V1RheGR1ZnQ3ZWxNVElpakxYRmlvMmVaVmQ2cFk3VmFaVXk2bktIb2RteXd4eTVOWWQzMlA5dFlZU3pH614c1acda1944",
+										"description": "server",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{apipath}}/getDeliveryBoy",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"getDeliveryBoy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginDeliveryBoy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"deliveryboy1\",\r\n    \"deviceid\" : \"eEllsUsFTdSKHAsHfy2oOt\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apipath}}/loginDeliveryBoy",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"loginDeliveryBoy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deliveryVerifyOTP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Z1gzaEdBdTBuSXRxd08xUGMwVnU4Q09xNTIxQWd4WGdpMGV6dWRTR2FsU1JneEw2cjFBQXo1U2xWbnVD617790e5aea72",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\":\"175866\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apipath}}/deliveryVerifyOTP",
+									"host": [
+										"{{apipath}}"
+									],
+									"path": [
+										"deliveryVerifyOTP"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "others",
+					"item": [
+						{
+							"name": "getHomePage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"description": "local",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"delivery_date\" : \"2021-05-10 00:00:00.000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/getHomePage",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getHomePage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDChat",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MXFWWHVWZkplUE10enA0eDdvSU5pUmttODNDYmJWT251UWtPVVZBMzBhMG05QjlzMDd2THpjUWpyZFhy61442d17c0cfb",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localpath}}/getDChat",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"getDChat"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "getProductByType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a1JnN1dCaEdXSmluanhocGhDOWVQRENFb3JvdHl0STZHSFJxZ0w3TzE3aGZFbE9KbTI0YW80MXJaemZ2618a69c4e47ca",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Z2JqWDY5VVFsMnZ6UXFKVWx3emtEMUVSWWJlSVA2ZXNnREcxR3h2VlVkWjhrSU1EQ0dlN2s0OFVINlNB6142d9f49535a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "VllSVTlhc1RaY2wySzRVSlI1Zm5ROGptcGw3aWs4WkhzNXBNUnlOWVo5WkxKTU5LekdtRXlJMXNyaHZQ618a68f40d271",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_type_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getProductByType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getProductByType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getsubTypeByType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z2JqWDY5VVFsMnZ6UXFKVWx3emtEMUVSWWJlSVA2ZXNnREcxR3h2VlVkWjhrSU1EQ0dlN2s0OFVINlNB6142d9f49535a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RXZzeVRSaDYzb3ROZW1janFFbUZDNnhrRlNNZGVZMU9JcHVOck41YkZmSTJtWnUyckQyU1dCUG5QcVVR613c4e55278f5",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_type_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getsubTypeByType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getsubTypeByType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "ejVaZ0lERUk3clI1WnlFNHU1TnJ2cFIwWHNhWlNRaWZkck9UWjdkVWpVVDc5QUlrVllreXBFa1c5dHFS618e0d10cb491",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"s\":\"ghee\",\r\n    \"sku_type_id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/searchProduct",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"searchProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getType",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RXZzeVRSaDYzb3ROZW1janFFbUZDNnhrRlNNZGVZMU9JcHVOck41YkZmSTJtWnUyckQyU1dCUG5QcVVR613c4e55278f5",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_id\" : 1811\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getProductById",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getProductById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrand",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "YTVyelVtejdrMFdqT3l0WXJudHJuZVpwM1pOeVBHSlprZlhlWXZEZDJLV1U1bE1seFRlWERtYm1kSktr617253cbf2e64",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getBrand",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByBrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer_id\":1,\r\n    \"page\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getProductByBrand",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getProductByBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bestSeller",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "ejVaZ0lERUk3clI1WnlFNHU1TnJ2cFIwWHNhWlNRaWZkck9UWjdkVWpVVDc5QUlrVllreXBFa1c5dHFS618e0d10cb491",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/bestSeller",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"bestSeller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductBySubType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"description": "serer",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_subtype_id\":2,\r\n    \"sku_type_id\" : 1,\r\n    \"page\" :1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getProductBySubType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getProductBySubType"
+							]
+						},
+						"description": "use this for similar products api also"
+					},
+					"response": []
+				},
+				{
+					"name": "getSubType",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getSubType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getSubType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "navigationCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Z2JqWDY5VVFsMnZ6UXFKVWx3emtEMUVSWWJlSVA2ZXNnREcxR3h2VlVkWjhrSU1EQ0dlN2s0OFVINlNB6142d9f49535a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "R3dOVXFZZmQwQ1JEaUVvTTBHZkRpb1ZTU01hUWhySE9lSUZvUUpyZ044UTlHeGgxY2RHSjFMa1BaSjA4618910f639978",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_type_id\":1,\r\n    \"page\" : 0,\r\n    \"b_order_id\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/navigationCart",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"navigationCart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user address",
+			"item": [
+				{
+					"name": "updateAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Wm1jVTdsRVlFVWtvRWVMenVNR1pRbWxsUmx6WlRreFF3d0JvVUp6M2kyM08wQzNMWmJVdWgwck1ZV056618e057e54d70",
+								"description": "server",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"add_id\" : 8482,\r\n    \"address1\" : \"101 Kiran Society\",\r\n    \"address2\" : \"Behind Abdul Soda\",\r\n    \"State_Id\" : \"1\",\r\n    \"City_Id\" : \"2\",\r\n    \"Location_Id\" : \"8\",\r\n    \"Pin_Code\" : \"411047\",\r\n    \"mobile_no\" : \"8080808080\",\r\n    \"address_status\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kisanpath}}/updateAddress",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"updateAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCountry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{kisanpath}}/getCountry",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"getCountry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStateByCountry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getStateByCountry",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getStateByCountry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCityByState",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getCityByState",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getCityByState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddress",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Wm1jVTdsRVlFVWtvRWVMenVNR1pRbWxsUmx6WlRreFF3d0JvVUp6M2kyM08wQzNMWmJVdWgwck1ZV056618e057e54d70",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "snehal",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{kisanpath}}/getAddress",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"getAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLocationByCity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"city_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getLocationByCity",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getLocationByCity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "bEU3djVpUVRMdzJTck1nam9tWW1aT2tMUk1uM0U1U3VodDJSNUFkWlV1aDN3ZTRjeVQ1aTdYN1RxVHdk6149a9392a05d",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"address1\" : \"sample second\",\r\n    \"address2\" : \"second sample\",\r\n    \"State_Id\" : \"1\",\r\n    \"City_Id\" : \"1\",\r\n    \"Location_Id\" : \"1\",\r\n    \"Pin_Code\" : \"440022\",\r\n    \"mobile_no\" :982346500,\r\n    \"society\" : \"sample\",\r\n    \"address_status\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/addAddress",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"addAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"add_id\": \"8460\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/removeAddress",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"removeAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setDefaultAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"description": "server",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"add_id\" : \"8459\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apipath}}/setDefaultAddress",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"setDefaultAddress"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "user order",
+			"item": [
+				{
+					"name": "getCartDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "ejVaZ0lERUk3clI1WnlFNHU1TnJ2cFIwWHNhWlNRaWZkck9UWjdkVWpVVDc5QUlrVllreXBFa1c5dHFS618e0d10cb491",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Wm1jVTdsRVlFVWtvRWVMenVNR1pRbWxsUmx6WlRreFF3d0JvVUp6M2kyM08wQzNMWmJVdWgwck1ZV056618e057e54d70",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getCartDetails",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getCartDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "ZzhXc1U2Qk9uUmNxVDl4cWVENmFEdE5uVzZiVFkyTGxET0hnaGxqbW01ek8zaVQ4blp0cnpGS05Vd2Jt61822c82324c6",
+								"description": "GS",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_id\":\"1914\",\r\n    \"sku_sid\":\"2008\",\r\n    \"Packsize\":\"1\",\r\n    \"sku_unit\":\"2\",\r\n    \"sku_rate\":\"15\",\r\n    \"add\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/addToCart",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "ek9oekpGRXdBd0RqemlRR1hrQ2Y5blRkcVcwdGhJNGdHem13czNtYm5oOWVLVHUwdHJjNVVERENuUkt2614f06e25fd8f",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "shubham",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Tzc0WGdQRlFRVXVVQ2ZiTXZXbXRkT0JtNGQ2Y3ZuYjV6Q3lwUktlckpNUU5zS1BYT25qS3dVRnpHbkFJ61585274baccc",
+								"description": "Gaurav",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserOrderDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 65641\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getUserOrderDetails",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getUserOrderDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Nnh0VEhwbFhiTXdvdVJNeVBSWmhvRTU5Q2xNSllYSTNxNGxkamdTUTV2NG5jQ3V6ZDI1T0JCV0NQRTJ3618b9551bbc58",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "Gaurav",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 62000,\r\n    \"delivery_date\": \"2021-11-12\",\r\n    \"reward_id\" : null,\r\n    \"payment_mode\" : \"Cash\",\r\n    \"payment_status\" : 0,\r\n    \"deliveryinstructions\" : \"same here\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kisanpath}}/checkout",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInvoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 387\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getInvoice",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMinimumOrderAmount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"business_model\" : 2,\r\n    \"city_id\" : 2,\r\n    \"state_id\" : 1,\r\n    \"order_type\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getMinimumOrderAmount",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getMinimumOrderAmount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelTempOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/cancelTempOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"cancelTempOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 51273\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/cancelOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"cancelOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOngoingOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getOngoingOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getOngoingOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPastOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "QkhQNnA5YkhuWjMzWkVzbHdQazV2dXgyTVU5dEx1YkcwZU1laXRYSHZBUmR0MzdzWGtnbVhZa01iYkhP61496b28984bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/getOngoingOrder",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"getOngoingOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "discountTimeout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bEU3djVpUVRMdzJTck1nam9tWW1aT2tMUk1uM0U1U3VodDJSNUFkWlV1aDN3ZTRjeVQ1aTdYN1RxVHdk6149a9392a05d",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "QUM2cTBjcUdiN1hLRXJCbUJBOGVpTGtXeHYyOE9qb0JtYTNTOVIzRklBSmRVejlhQUdpeFQxVjVrNGFp616526683348e",
+								"description": "Gaurav",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/discountTimeout",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"discountTimeout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelTempOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Shweta",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Nnh0VEhwbFhiTXdvdVJNeVBSWmhvRTU5Q2xNSllYSTNxNGxkamdTUTV2NG5jQ3V6ZDI1T0JCV0NQRTJ3618b9551bbc58",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/cancelTempOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"cancelTempOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCartItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 61437,\r\n    \"bo_details_id\" : 1168781\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/removeCartItem",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"removeCartItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "savedOrderList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "ek9oekpGRXdBd0RqemlRR1hrQ2Y5blRkcVcwdGhJNGdHem13czNtYm5oOWVLVHUwdHJjNVVERENuUkt2614f06e25fd8f",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "shubham",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Tzc0WGdQRlFRVXVVQ2ZiTXZXbXRkT0JtNGQ2Y3ZuYjV6Q3lwUktlckpNUU5zS1BYT25qS3dVRnpHbkFJ61585274baccc",
+								"description": "Gaurav",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/savedOrderList",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"savedOrderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkCartType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a1JnN1dCaEdXSmluanhocGhDOWVQRENFb3JvdHl0STZHSFJxZ0w3TzE3aGZFbE9KbTI0YW80MXJaemZ2618a69c4e47ca",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Z2JqWDY5VVFsMnZ6UXFKVWx3emtEMUVSWWJlSVA2ZXNnREcxR3h2VlVkWjhrSU1EQ0dlN2s0OFVINlNB6142d9f49535a",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "VllSVTlhc1RaY2wySzRVSlI1Zm5ROGptcGw3aWs4WkhzNXBNUnlOWVo5WkxKTU5LekdtRXlJMXNyaHZQ618a68f40d271",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku_type_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/checkCartType",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"checkCartType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSavedOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "Sneha",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"b_order_id\" : 61443,\r\n    \"page\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getSavedOrder",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getSavedOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupons",
+			"item": [
+				{
+					"name": "applyCoupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reward_id\": \"3\",\r\n    \"total\" : 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/applyCoupon",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"applyCoupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Zk83cWd0ZTRxUzVUWTNPMlBXT00yWW1LcWtsTzZEUG4zSEJnWWh1WXhBcFg4ZHlOTHdkWmRJN2FZTjVw6182582eef637",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "shweta",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reward_id\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/getCoupon",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getCoupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOffer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "local",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bWRPTHpPbnZOU3NvTGVZVTN5MEM2T0Z1bThZVVphSGpvN292aFFuUUtJV05FMU5vUWxrMVgzenZXQjFY614827de0f542",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getOffer",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getOffer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCoupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reward_id\": \"3\",\r\n    \"grand_total\" : 420\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/removeCoupon",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"removeCoupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user notification",
+			"item": [
+				{
+					"name": "getNotification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/getNotification",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"getNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readNotification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nid\" : 336\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apipath}}/readNotification",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"readNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserNotificationPref",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "local",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offer\": 1,\r\n    \"order\": 1,\r\n    \"wallet\": 0,\r\n    \"promotion\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/updateUserNotificationPref",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"updateUserNotificationPref"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkUserNotiPref",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/checkUserNotiPref",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"checkUserNotiPref"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "promotionNotification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/promotionNotification",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"promotionNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "offerNotification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/offerNotification",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"offerNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNotificationSetting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "local",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getNotificationSetting",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getNotificationSetting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "getWallet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getWallet",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getWallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRecentWalletTransaction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bWRPTHpPbnZOU3NvTGVZVTN5MEM2T0Z1bThZVVphSGpvN292aFFuUUtJV05FMU5vUWxrMVgzenZXQjFY614827de0f542",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/getRecentWalletTransactions",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"getRecentWalletTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWalletTransactionByStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bWRPTHpPbnZOU3NvTGVZVTN5MEM2T0Z1bThZVVphSGpvN292aFFuUUtJV05FMU5vUWxrMVgzenZXQjFY614827de0f542",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apipath}}/getWalletTransactionByStatus",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"getWalletTransactionByStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWalletTransaction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bWRPTHpPbnZOU3NvTGVZVTN5MEM2T0Z1bThZVVphSGpvN292aFFuUUtJV05FMU5vUWxrMVgzenZXQjFY614827de0f542"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/getWalletTransaction",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"getWalletTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "useWallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total\": 1500,\r\n    \"b_order_id\" : 16401\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/useWallet",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"useWallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeWallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total\" : 1400,\r\n    \"wallet\": 100,\r\n    \"b_order_id\" : 16401\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/removeWallet",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"removeWallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMoneyWallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/addMoneyWallet",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"addMoneyWallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "OTPverification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\" : \"96161\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/OTPverification",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"OTPverification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"description": "shubham",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RXZzeVRSaDYzb3ROZW1janFFbUZDNnhrRlNNZGVZMU9JcHVOck41YkZmSTJtWnUyckQyU1dCUG5QcVVR613c4e55278f5",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"description": "Snehal",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Wm1jVTdsRVlFVWtvRWVMenVNR1pRbWxsUmx6WlRreFF3d0JvVUp6M2kyM08wQzNMWmJVdWgwck1ZV056618e057e54d70",
+								"description": "Gaurav",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "Shweta",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RTRPdkhBMXE3ZkY1N0l5eXhGZm0xM3RBcm9Tc0t5RkNpam1ua1ljQU9vMlVUOFhhWHNkMXlqSzdJZUs561710cfd38052",
+								"description": "RSP Server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getUserProfile",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getUserProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendOTP",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/sendOTP",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"sendOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "Shweta",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"member_mobile\" : 8408010988,\r\n    \"email_id\" : \"saksham@yahoo.co.in\",\r\n    \"member_name\" : \"Saksham Pawar\",\r\n    \"foodvendor\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/updateProfile",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReferral",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "RUI5YWZPdG15eG1RS3RlYXdkOXhIT1dCY0lkNHVjMjdDbENwampneGRuZUNSUWl3MWlYUHV4OE1waU1L614c1cee5356c",
+								"description": "shubham",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "dVNBd1FDWDVrOEY2QlhPMzdGVldtYmpzcmxOSGRYVlNhSFVXUDdOWlRjMkQ2YzVxNU80eDFKNDhyOVBT614970cec2b49",
+								"description": "server",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "b01xNEl3eVpudVp6aU1JZk9ObnhMaXo3QVR3aHhyZ0hsb0x3b28yUXNVWmMwZ1VyUnJjMHg5RUtreFpB614b032a97fd6",
+								"description": "local",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getReferral",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getReferral"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMemberAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WVdtVkJyOEpwc3ptTEtkWkVIV3BRWTdvZ2M3U0g0UzBZWWRSa3o5aUdvSFlIM2NwZTJvRWlQZDZqbHZM618a124f8a648",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eVBQUXZ2Z1d2UmNIMVVPdFI2bFNIeVNhalJ5bnZ3YXNIS2dkaVNUMXhqOVZuZlpMSUN0VGhQcXY4Nksy618e6d0f8dd6c",
+								"description": "server",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eW1SZ0kydGVsanZiWkRrY242TExXWVI5Qlc4eENVWHRTSE43VFh1SmExMTNtZEdGanJqRlFJclBsdW1w61582216532f5",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address1\" : \"sample second\",\r\n    \"address2\" : \"second sample\",\r\n    \"State_Id\" : \"1\",\r\n    \"City_Id\" : \"2\",\r\n    \"Location_Id\" : \"37\",\r\n    \"Pin_Code\" : \"440022\",\r\n    \"society\" : \"sample\",\r\n    \"member_name\" : \"Sakshi\",\r\n    \"email_id\" : \"sakshi123@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kisanpath}}/addMemberAddress",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"addMemberAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\" : 529870,\r\n    \"username\" : \"shubham@yahoo.co.in\",\r\n    \"newpassword\" : \"welcome@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/resetPassword",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"welcome@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apipath}}/createPassword",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"createPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDefaultSetting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"description": "shubham",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RXZzeVRSaDYzb3ROZW1janFFbUZDNnhrRlNNZGVZMU9JcHVOck41YkZmSTJtWnUyckQyU1dCUG5QcVVR613c4e55278f5",
+								"description": "local",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SDcxdzdJSWhVaGFkTDdOb0hpN1ZyWXpEcUtvcUd3dzNJeFh2c2lrRmx3enB0ZE0xbHpBdnZUa3NUaGpV6164349de2150",
+								"description": "Snehal",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "QUM2cTBjcUdiN1hLRXJCbUJBOGVpTGtXeHYyOE9qb0JtYTNTOVIzRklBSmRVejlhQUdpeFQxVjVrNGFp616526683348e",
+								"description": "Gaurav",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"description": "Shweta",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RTRPdkhBMXE3ZkY1N0l5eXhGZm0xM3RBcm9Tc0t5RkNpam1ua1ljQU9vMlVUOFhhWHNkMXlqSzdJZUs561710cfd38052",
+								"description": "RSP Server",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getDefaultSetting",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getDefaultSetting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUpMob",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNo\":\"8181818181\",\r\n    \"deviceid\":\"Qyk34fgsjkhgksghs34af177AAA45_ufmGFetFDRRR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kisanpath}}/signUpMob",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"signUpMob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNo\":\"8181818181\",\r\n    \"otp\":\"389277\",\r\n     \"deviceid\":\"Qyk34fgsjkhgksghs34af177AAA45_ufmGFetFDRRR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kisanpath}}/verifyOTP",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "others",
+			"item": [
+				{
+					"name": "addBanner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z3djRmRpdFhoQWdJY0RrdUdmaWQ1ZHRXa0pqMDdNanRUN0h1enVXWDNISHdmcnBhZWxYU0c0d1dWOFNJ613c68710eb3a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "srno",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "shopnowlink",
+									"value": "https://www.kisanserv.com/",
+									"type": "text"
+								},
+								{
+									"key": "bannertext",
+									"value": "Online Grocerry Shopping",
+									"type": "text"
+								},
+								{
+									"key": "bannerheader",
+									"value": "Grocery Shopping",
+									"type": "text"
+								},
+								{
+									"key": "bannertextlink",
+									"value": "https://www.kisanserv.com/",
+									"type": "text"
+								},
+								{
+									"key": "banner",
+									"type": "file",
+									"src": "/C:/Users/Shubham/Desktop/download.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apipath}}/addBanner",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"addBanner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFAQ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getFAQ",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getFAQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getChat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "alc1aVhjTVFCdTBnVER6ajFxRzdMaXJMSk9wTXhzbE5kUk1qamlFTWNOb294Z3BKcEttMXIwNmt2aDFS615a8f4445859",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/getChat",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"getChat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBanner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Z2JqWDY5VVFsMnZ6UXFKVWx3emtEMUVSWWJlSVA2ZXNnREcxR3h2VlVkWjhrSU1EQ0dlN2s0OFVINlNB6142d9f49535a",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{kisanpath}}/getBanner",
+							"host": [
+								"{{kisanpath}}"
+							],
+							"path": [
+								"getBanner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "ccAvenuePay",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dzZ6N2wwTjJRYklBMUdhZ2xyWDRXOUdKcm5FbVF2akpUWERhYUNRRXNFcDBGMmRYT0xhcE9CSldhTjNQ613c50f992117",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "SzBGcEFOdHU0N25GZG0zdmdIVm9DSkV3bzBRSGVQaGtreXJWaXUzanprczdBTUFJNE9uRGdlcFplbmg16155855e40fbf",
+								"description": "server",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/ccAvenuePay/16401/100",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"ccAvenuePay",
+								"16401",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sodexo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "ZQhihI0BdU9DQZB5343VGmeJVnmBV6VdZmIO8ruSfscYZMdWBUlrBG5oKimWb09m",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localpath}}/sodexo/16401/100",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"sodexo",
+								"16401",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invoice",
+			"item": [
+				{
+					"name": "https://kisanserv.in/KioskMembership/KioskService.aspx/orderinfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": ".ASPNETAUTH=0102A3902D8C088FD908FEA3EEFD3E098FD90800137300680075006200680061006D0040007900610068006F006F002E0063006F002E0069006E0000012F00FF",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://kisanserv.in",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "https://kisanserv.in/KioskMembership/Kiosk_performa_invoice.aspx?orderid=64642&categoryid=4&membershipno=4&type=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderid\": 64642\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/KioskMembership/KioskService.aspx/orderinfo",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"KioskMembership",
+								"KioskService.aspx",
+								"orderinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://kisanserv.in/KioskMembership/KioskService.aspx/getkioskid",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": ".ASPNETAUTH=0102845E8A58098FD908FE84BC5A0B0A8FD90800137300680075006200680061006D0040007900610068006F006F002E0063006F002E0069006E0000012F00FF",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://kisanserv.in",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "https://kisanserv.in/KioskMembership/Kiosk_performa_invoice.aspx?orderid=64642&categoryid=4&membershipno=4&type=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderid\": 64642\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/KioskMembership/KioskService.aspx/getkioskid",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"KioskMembership",
+								"KioskService.aspx",
+								"getkioskid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://kisanserv.in/KioskMembership/KioskService.aspx/loadinvoicenew",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": ".ASPNETAUTH=0102845E8A58098FD908FE84BC5A0B0A8FD90800137300680075006200680061006D0040007900610068006F006F002E0063006F002E0069006E0000012F00FF",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://kisanserv.in",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "https://kisanserv.in/KioskMembership/Kiosk_performa_invoice.aspx?orderid=64642&categoryid=4&membershipno=4&type=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderid\": 64642\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/KioskMembership/KioskService.aspx/loadinvoicenew",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"KioskMembership",
+								"KioskService.aspx",
+								"loadinvoicenew"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RSP",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "rsp/getProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "narangventures",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"company_id\" : 253\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/rsp/getProduct",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"rsp",
+										"getProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rsp/addRSProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "narangventures",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"b_order_id\" : 2333\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localpath}}/rsp/addRSProduct",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"rsp",
+										"addRSProduct"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "rsp/getOrder",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "TESTDUMMY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localpath}}/rsp/getOrder",
+									"host": [
+										"{{localpath}}"
+									],
+									"path": [
+										"rsp",
+										"getOrder"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "getCompanyInfo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "TnkzMWRxVUtReEk5dURFaHBpYmF5Vnc0WHllaHFIWVZiWUhkNGczcmJBdHZQRFA2RjZWcmVhc2dFOVhG617110ae7c810",
+								"description": "RSP",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "RTRPdkhBMXE3ZkY1N0l5eXhGZm0xM3RBcm9Tc0t5RkNpam1ua1ljQU9vMlVUOFhhWHNkMXlqSzdJZUs561710cfd38052",
+								"description": "RSP Server",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apipath}}/rsp/getCompanyInfo",
+							"host": [
+								"{{apipath}}"
+							],
+							"path": [
+								"rsp",
+								"getCompanyInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rsp/createRSP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "narangventures",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"membership_no\" : 11,\r\n    \"delivery\" : 0,\r\n    \"comp_name\" : \"YouSteve Enterprises\",\r\n    \"gstin\" : \"27DSW6HTS12\",\r\n    \"pan_no\" : \"BBKYB8112H\",\r\n    \"nameasperbank\" : \"Yousteve Enterprises\",\r\n    \"accounttype\": \"Current\",\r\n    \"ifsccode\" : \"ICIC7771098\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localpath}}/rsp/createRSP",
+							"host": [
+								"{{localpath}}"
+							],
+							"path": [
+								"rsp",
+								"createRSP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dotnet",
+			"item": [
+				{
+					"name": "Adduser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"shubham@yahoo.co.in\",\r\n    \"Password\": \"welcome@123\",\r\n    \"Email_id\": \"shubham@yahoo.co.in\",\r\n    \"Question\": \"What is your pet name\",\r\n    \"Answer\": \"Krypto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/kloginapi.aspx/Adduser",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"kloginapi.aspx",
+								"Adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logincheck",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"shubham@yahoo.co.in\",\r\n    \"password\": \"welcome@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/kloginapi.aspx/logincheck",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"kloginapi.aspx",
+								"logincheck"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getkioskid",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "01028919EB42648DD908FE8977BBF5648DD90800137300680075006200680061006D0040007900610068006F006F002E0063006F002E0069006E0000012F00FF",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderid\": 64649\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/KioskMembership/KioskService.aspx/getkioskid",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"KioskMembership",
+								"KioskService.aspx",
+								"getkioskid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"deliveryboy1\",\r\n    \"newpassword\": \"welcome@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/kloginapi.aspx/resetpassword",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"kloginapi.aspx",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnlockUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"deliveryboy1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kisanserv.in/kloginapi.aspx/UnlockUser",
+							"protocol": "https",
+							"host": [
+								"kisanserv",
+								"in"
+							],
+							"path": [
+								"kloginapi.aspx",
+								"UnlockUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
